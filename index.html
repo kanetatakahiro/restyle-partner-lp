@@ -90,7 +90,8 @@ section{padding-block:96px}
 
 /* Issue */
 .issue-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center;margin-top:56px}
-.issue-photo{aspect-ratio:4/3}
+.issue-fig{margin:0;background:var(--bg-2);border:1px solid var(--line);border-radius:8px;padding:8px}
+.issue-fig svg{display:block;width:100%;height:auto;font-family:var(--font-jp)}
 .checks{list-style:none;padding:0;margin:0;display:grid;gap:12px}
 .checks li{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--line);background:var(--card);border-radius:6px;padding:16px 18px;font-weight:500;box-shadow:var(--shadow)}
 .checks li::before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--orange);color:#fff;font-size:13px;font-weight:900;display:grid;place-items:center;margin-top:2px}
@@ -345,7 +346,34 @@ footer a{color:#fff}
   <div class="wrap">
     <div class="st"><h2 class="st-en">Issue</h2><p class="st-jp">こんなお悩みありませんか</p><div class="st-dia"></div></div>
     <div class="issue-grid">
-      <div class="photo issue-photo"><img src="img/issue.jpg" alt="車両の作業をするスタッフ" loading="lazy"></div>
+      <figure class="issue-fig" aria-label="今の入庫の流れ：ディーラー・法人・業販・下請けからの仕事だけで、一般のお客様とつながる仕組みがない">
+        <svg viewBox="0 0 480 340" role="img">
+          <defs>
+            <marker id="ar-navy" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#0E386C"/></marker>
+            <marker id="ar-or" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#E76B03"/></marker>
+          </defs>
+          <text x="24" y="34" font-size="15" font-weight="700" fill="#4A5363">今の入庫の流れ</text>
+          <g font-size="15" font-weight="700" text-anchor="middle">
+            <rect x="24" y="56" width="130" height="42" rx="21" fill="#0E386C"/><text x="89" y="82" fill="#fff">ディーラー</text>
+            <rect x="24" y="116" width="130" height="42" rx="21" fill="#0E386C"/><text x="89" y="142" fill="#fff">法人・業販</text>
+            <rect x="24" y="176" width="130" height="42" rx="21" fill="#0E386C"/><text x="89" y="202" fill="#fff">下請け</text>
+            <rect x="24" y="266" width="130" height="42" rx="21" fill="#fff" stroke="#E76B03" stroke-width="2"/><text x="89" y="292" fill="#E76B03">一般のお客様</text>
+          </g>
+          <g stroke="#0E386C" stroke-width="2.5" fill="none" marker-end="url(#ar-navy)">
+            <path d="M158 77 C230 77 250 128 298 140"/>
+            <path d="M158 137 L298 152"/>
+            <path d="M158 197 C230 197 250 176 298 166"/>
+          </g>
+          <path d="M158 287 C220 287 252 248 296 216" stroke="#E76B03" stroke-width="2.5" stroke-dasharray="7 6" fill="none" marker-end="url(#ar-or)"/>
+          <circle cx="234" cy="258" r="15" fill="#E76B03"/><text x="234" y="264" font-size="17" font-weight="900" fill="#fff" text-anchor="middle">×</text>
+          <text x="244" y="318" font-size="13" font-weight="700" fill="#E76B03" text-anchor="middle">つながる仕組みがない</text>
+          <path d="M304 118 L380 82 L456 118 V214 H304 Z" fill="#fff" stroke="#0E386C" stroke-width="2.5"/>
+          <rect x="352" y="172" width="56" height="42" fill="#F3F6FA" stroke="#0E386C" stroke-width="2"/>
+          <text x="380" y="150" font-size="16" font-weight="900" fill="#1A1F2B" text-anchor="middle">あなたの工場</text>
+          <text x="380" y="248" font-size="13" font-weight="700" fill="#4A5363" text-anchor="middle">入庫量も単価も</text>
+          <text x="380" y="268" font-size="13" font-weight="700" fill="#4A5363" text-anchor="middle">元請け次第</text>
+        </svg>
+      </figure>
       <ul class="checks">
         <li>入庫量がディーラー・業販の発注に左右される</li>
         <li>単価を自社で決めにくい</li>
@@ -362,7 +390,7 @@ footer a{color:#fff}
   <div class="wrap">
     <div class="st"><h2 class="st-en">Partner</h2><p class="st-jp">ReStyle Partnerとは</p><div class="st-dia"></div></div>
     <div class="about-grid">
-      <div class="photo about-photo"><img src="img/about.jpg" alt="塗装作業の様子" loading="lazy"></div>
+      <div class="photo about-photo"><img src="img/about.jpg" alt="塗装作業中のReStyle川口店の工場" loading="lazy"></div>
       <div class="about-copy">
         <h3>今の仕事はそのまま。<br>一般ユーザー直受けを<br><span class="em">「もう一本の柱」</span>に。</h3>
         <p>ReStyle Partnerは、板金塗装工場が一般のお客様から直接仕事を受けるための、集客・問い合わせ対応・営業の仕組みを提供する加盟店サービスです。集客から現車確認まではReStyleが支援するので、工場さまは得意な「直す仕事」に集中できます。</p>
@@ -398,7 +426,7 @@ footer a{color:#fff}
           <li>公式LINEとAIフロント「RAOS」で問い合わせに対応</li>
         </ul>
       </div>
-      <div class="photo why-photo"><img src="img/why.jpg" alt="ReStyleの塗装作業" loading="lazy"></div>
+      <div class="photo why-photo"><img src="img/why.jpg" alt="ReStyleスタッフの磨き作業" loading="lazy"></div>
     </div>
     <div class="stats">
       <div class="stat"><small>月平均施工台数</small><b><i>約</i>21.6<span>台</span></b></div>
