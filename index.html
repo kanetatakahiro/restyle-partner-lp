@@ -167,6 +167,10 @@ section{padding-block:96px}
 .raos-feats .en{font-family:var(--font-en);color:var(--orange);font-size:18px;letter-spacing:.02em;line-height:1.2}
 .raos-feats h4{margin:0;font-size:16px;font-weight:900}
 .raos-feats p{font-size:14px;color:var(--sub);line-height:1.7}
+.raos-badges{list-style:none;padding:0;margin:20px 0 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;max-width:520px}
+.raos-badges li{background:var(--navy);color:#fff;border-radius:8px;padding:12px 8px;text-align:center;display:flex;flex-direction:column;gap:4px}
+.raos-badges b{font-family:var(--font-jp);font-weight:900;font-size:18px;line-height:1.2;color:#FFB066}
+.raos-badges span{font-size:12px;line-height:1.45;color:rgba(255,255,255,.9)}
 .raos-sum{margin-top:32px;text-align:center;font-weight:900;font-size:clamp(17px,2vw,22px)}
 .raos-note{margin-top:8px;text-align:center;font-size:12px;color:var(--mute)}
 .card.raos a{color:#FFB066;font-weight:700;font-size:14px;text-decoration:none;margin-top:4px}
@@ -484,7 +488,7 @@ footer a{color:#fff}
         <span class="badge-ai">AI FRONT</span>
         <svg viewBox="0 0 24 24"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 3v4M9 12v1.5M15 12v1.5M9.5 16h5"/></svg>
         <p class="en">RAOS</p><h3>AIフロント「RAOS」</h3>
-        <p>LINEの問い合わせにAIが一次対応し、返信漏れや対応の遅れを防ぎます。工場さまの手を止めずに、見積り相談を受け付けられます。</p>
+        <p>24時間365日、LINEの問い合わせにAIがすぐ返信。概算のご案内から現車確認の予約、返事がないお客様への追客まで、営業担当として動きます。</p>
         <a href="#raos">RAOSについて詳しく ▶</a>
       </article>
       <article class="card">
@@ -514,25 +518,33 @@ footer a{color:#fff}
     <div class="raos-top">
       <figure class="raos-fig"><img src="img/raos.jpg" alt="AIフロントスタッフ RAOS（RESTYLE AI Operating System）のキャラクター" width="640" height="768" loading="lazy"><figcaption>RAOS（ラオス）｜RESTYLE AI Operating System</figcaption></figure>
       <div class="raos-copy">
-        <h3>LINEの問い合わせから<br><span class="em">現車確認の予約まで</span>、<br>AIが対応します。</h3>
-        <p>RAOSは、ReStyleが自社工場の問い合わせ対応のために開発・運用しているAIフロントスタッフです。お客様と会話しながら必要な情報を聞き取り、概算のご案内から現車確認の日程確定までを進めます。作業中で手が離せないときも、問い合わせを待たせません。</p>
+        <h3><span class="em">24時間365日</span>、<br>ReStyleのために営業する<br>最強のAIスタッフ。</h3>
+        <p>RAOS（ラオス）は、ReStyleが自社工場で開発・運用しているAIフロントスタッフです。深夜も休日も、職人が作業で手が離せないときも、LINEの問い合わせにすぐ返信。お客様と会話しながら必要な情報を聞き取り、概算のご案内から現車確認の予約確定まで、営業担当として進めます。</p>
+        <ul class="raos-badges">
+          <li><b>24h</b><span>365日<br>すぐに返信</span></li>
+          <li><b>概算→予約</b><span>現車確認の<br>日程確定まで</span></li>
+          <li><b>追客</b><span>返事がない<br>お客様にも自動で</span></li>
+        </ul>
         <div class="chat" aria-label="LINEでの会話イメージ">
-          <span class="chat-cap">LINEでの会話イメージ</span>
+          <span class="chat-cap">LINEでの会話イメージ（夜23時）</span>
           <p class="msg user">ハイエースの全塗装っていくらくらいですか？</p>
           <p class="msg ai"><b>RAOS</b>お問い合わせありがとうございます。年式とご希望の色を教えていただけますか？お車の写真もあるとスムーズです。</p>
-          <p class="msg ai"><b>RAOS</b>料金表をもとに概算をご案内しました。正式なお見積りは現車確認で行います。〇日（〇）10:00か、〇日（〇）14:00はいかがでしょうか？</p>
+          <p class="msg ai"><b>RAOS</b>概算は以上です。正式なお見積りは現車確認で行います。〇日（〇）10:00、〇日（〇）14:00、〇日（〇）11:00の中で、ご都合のよい日時はありますか？</p>
         </div>
       </div>
     </div>
     <ul class="raos-feats">
-      <li><span class="en">HEARING</span><h4>会話で必要な情報を聞き取り</h4><p>車種・年式・地域・希望の施工や色などを、会話の流れで自然に確認します。</p></li>
-      <li><span class="en">ESTIMATE</span><h4>料金表をもとに概算を案内</h4><p>工場さまの料金表とサイズ判定のルールを根拠に、概算金額をご案内します。</p></li>
-      <li><span class="en">BOOKING</span><h4>現車確認の予約を確定</h4><p>Googleカレンダーの空き状況から候補日時を提示し、予約の確定・変更・キャンセルまで対応します。</p></li>
-      <li><span class="en">FOLLOW UP</span><h4>概算後の追客を自動で</h4><p>概算をお伝えしたまま返事がないお客様に、3日後に自動でフォローのメッセージを送ります。</p></li>
-      <li><span class="en">HAND OFF</span><h4>判断が必要な案件はスタッフへ</h4><p>AIで判断すべきでない相談や、スタッフとの話を希望されたときは、スタッフ用LINEに通知して引き継ぎます。</p></li>
-      <li><span class="en">DAILY REPORT</span><h4>返信待ちを毎朝お知らせ</h4><p>スタッフの返信が必要な問い合わせを、毎朝一覧でお知らせします。対応漏れを防ぎます。</p></li>
+      <li><span class="en">24H / 365</span><h4>いつでも、すぐに返信</h4><p>夜間・休日・作業中でも、お客様を待たせません。続けて届いたメッセージはまとめて読み取り、1回で返信します。</p></li>
+      <li><span class="en">HEARING</span><h4>会話で必要な情報を聞き取り</h4><p>車種・年式・地域・希望の施工や色を、会話の流れで確認。お客様ごとの会話履歴を覚えていて、続きから話せます。</p></li>
+      <li><span class="en">ESTIMATE</span><h4>料金表をもとに概算を案内</h4><p>料金表と車のサイズ判定のルールを根拠に概算をご案内。全塗装・部分塗装・パネル塗装・事故や保険など、相談内容ごとの流れで対応します。</p></li>
+      <li><span class="en">BOOKING</span><h4>現車確認の予約まで確定</h4><p>Googleカレンダーの空きから候補日時を3つ提示し、予約を確定。変更・キャンセルにも対応し、二重予約や時間の重なりを防ぎます。</p></li>
+      <li><span class="en">FOLLOW UP</span><h4>概算後の追客も自動</h4><p>概算のあと返事がないお客様に、3日後にフォローのメッセージを自動で送信。文面はスタッフが確認・見送りできます。</p></li>
+      <li><span class="en">HAND OFF</span><h4>人が出るべき場面を見極める</h4><p>クレーム、値引き交渉、担当者との話を希望されたときは自動で検知し、スタッフ用LINEに通知して引き継ぎます。</p></li>
+      <li><span class="en">BATON</span><h4>予約後はスタッフにバトンタッチ</h4><p>現車確認の予約が決まったら、スタッフ対応へ切り替え。入庫後の作業状況や納期の問い合わせも、スタッフへ確実に回します。</p></li>
+      <li><span class="en">DAILY REPORT</span><h4>毎朝、返信待ちと返信案を報告</h4><p>スタッフの返信が必要な問い合わせを毎朝一覧にして、AIが作った返信案と一緒にお知らせ。対応漏れを防ぎます。</p></li>
+      <li><span class="en">MULTI STORE</span><h4>複数店舗にも対応</h4><p>お客様の地域から担当店舗を判定し、店舗ごとのカレンダーで予約を受け付けます。</p></li>
     </ul>
-    <p class="raos-sum">工場さまは、<span class="em">現車確認に来たお客様</span>への対応に集中できます。</p>
+    <p class="raos-sum">人を増やさずに、<span class="em">24時間働く営業スタッフ</span>が1人増える。</p>
     <p class="raos-note">※会話はイメージです。料金表・営業時間・予約枠などは、工場さまごとに設定します。</p>
   </div>
 </section>
